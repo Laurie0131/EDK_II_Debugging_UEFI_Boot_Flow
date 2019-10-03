@@ -130,6 +130,13 @@ Note:
 <br>
 <br>
 @box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:70%" ><span style="font-size:01.1em; font-weight: bold;" ><font face="Consolas">CpuIceBreakPoint</font><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-west span-100]
+<br>
+<br>
+<br>
+<br>
 <p align="Left" style="line-height:80%"><span style="font-size:0.8em" >
 The Intel Architecture has a special op-code for a breakpoint:	<font face="Consolas">int1 </font><br>
 Better than a <font face="Consolas">CpuDeadLoop()</font> since it halts the processor. Better trace information<br>
@@ -146,11 +153,9 @@ Downside:
 @title[Debugging Thru Boot FlowSection]
 <br><br><br><br><br><br><br>
 ### <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Debugging Thru Boot Flow</span>
-<span style="font-size:0.9em" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add Breakpoints to the Compiled BIOS / Firmware Source Code</span>
+<span style="font-size:0.9em" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add Breakpoints to Firmware Source Code</span>
 
 Note:
----
-blank slide
 
 
 
@@ -527,23 +532,31 @@ Note:
 @title[Debug in Pre-Boot – UEFI Shell]
 <p align="right"><span class="gold" ><b>Debug in Pre-Boot – UEFI Shell Application</b></span></p>
 <span style="font-size:0.8em" >Add `CpuBreakpoint()` to SampleApp.c near the entry point</span>
-<br>
-<br>
-<div class="left">
-<span style="font-size:0.7em" >Add SampleApp.inf to the platform .dsc file</span>
-<pre class='bash'>
-```
-bash$ cd <edk2 workspace directory>
-bash$ . edksetup.sh
-bash$ build -m SampleApp/SampleApp.inf
-```
-</pre>
-<span style="font-size:0.7em" >Copy the binary SampleApp.efi to USB drive</span><br>
-</div>
-<div class="right">
-<span style="font-size:0.8em" >&nbsp;  </span>
-</div>
 
+@snap[north-west span-50 ]
+<br>
+<br>
+<br><br><br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" ><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+
+@snap[north-west span-49]
+<br>
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.7em" >Add SampleApp.inf to the platform .dsc file</span></p>
+
+<p style="line-height:45%" align="left" ><span style="font-size:0.57em; font-family:Consolas;" >&nbsp;&nbsp;
+ bash$ cd &lt;edk2 workspace directory&gt;<br>&nbsp;&nbsp;
+ bash$ . edksetup.sh<br>&nbsp;&nbsp;
+ bash$ build -m SampleApp/SampleApp.inf<br>&nbsp;&nbsp;
+<br><br><br>&nbsp;
+</span></p>
+<p style="line-height:45%" align="left" ><span style="font-size:0.7em" >
+Copy the binary SampleApp.efi to USB drive and run SampleApp.efi from UEFI Shell</span></p>
+@snapend
 
 Note:
 
