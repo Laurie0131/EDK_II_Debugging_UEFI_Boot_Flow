@@ -531,12 +531,16 @@ Note:
 ---?image=/assets/images/slides/Slide22.JPG
 @title[Debug in Pre-Boot – UEFI Shell]
 <p align="right"><span class="gold" ><b>Debug in Pre-Boot – UEFI Shell Application</b></span></p>
-<span style="font-size:0.8em" >Add `CpuBreakpoint()` to SampleApp.c near the entry point</span>
+<p style="line-height:65%" align="left" ><span style="font-size:0.8em" >
+Add `CpuBreakpoint()` to SampleApp.c near the entry point
+<br>
+@size[.8em](Add SampleApp.inf to the platform .dsc file)
+</span></p>
 
 @snap[north-west span-50 ]
 <br>
 <br>
-<br><br><br>
+<br><br><br><br>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" ><br><br><br>&nbsp;</span></p>)
 @snapend
 
@@ -546,15 +550,15 @@ Note:
 <br>
 <br>
 <br>
-<p style="line-height:45%" align="left" ><span style="font-size:0.7em" >Add SampleApp.inf to the platform .dsc file</span></p>
+<p style="line-height:45%" align="left" ><span style="font-size:0.7em" ><br></span></p>
 
-<p style="line-height:45%" align="left" ><span style="font-size:0.57em; font-family:Consolas;" >&nbsp;&nbsp;
+<p style="line-height:35%" align="left" ><span style="font-size:0.4em; font-family:Consolas;" >&nbsp;&nbsp;
  bash$ cd &lt;edk2 workspace directory&gt;<br>&nbsp;&nbsp;
  bash$ . edksetup.sh<br>&nbsp;&nbsp;
  bash$ build -m SampleApp/SampleApp.inf<br>&nbsp;&nbsp;
 <br><br><br>&nbsp;
 </span></p>
-<p style="line-height:45%" align="left" ><span style="font-size:0.7em" >
+<p style="line-height:65%" align="left" ><span style="font-size:0.7em" >
 Copy the binary SampleApp.efi to USB drive and run SampleApp.efi from UEFI Shell</span></p>
 @snapend
 
