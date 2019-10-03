@@ -46,7 +46,7 @@ Note:
 <!---  Add bullets using https://fontawesome.com/cheatsheet certificate
 -->
 <ul style="list-style-type:none">
- <li>@fa[certificate gp-bullet-magenta]<span style="font-size:0.9em">&nbsp;&nbsp;Debugging commands similar to all debuggers</span> </li>
+ <li>@fa[certificate gp-bullet-magenta]<span style="font-size:0.9em">&nbsp;&nbsp;Debugging commands similar to all debuggers</span> </li><br>
  <li>@fa[certificate gp-bullet-cyan]<span style="font-size:0.9em">&nbsp;&nbsp;Debugging UEFI Platform Initialization Boot Flow</span></li>
 </ul>
 
@@ -102,7 +102,7 @@ Note:
 @box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:70%" ><span style="font-size:01.1em; font-family:Consolas;" >CpuDeadLoop<br>&nbsp;</span></p>)
 <p align="Left" style="line-height:80%"><span style="font-size:0.8em" >When using a Hardware debugger: </span> </p>
 <ul style="list-style-type:disc; line-height:0.7;">
-   <li><span style="font-size:0.67em" >In-Target Probe(ITP)</span></li>
+   <li><span style="font-size:0.67em" >In-Target Probe(ITP) - <a href="https://software.intel.com/en-us/system-studio/system-debugger">Intel<sup>&reg;</sup> System Studio</a></span></li>
    <li><span style="font-size:0.67em" >Intel<sup>&reg;</sup> SVT DCI Cable</span></li>
    <li><span style="font-size:0.67em" >Intel<sup>&reg;</sup> SVT Closed Chassis Adapter (CCA)</span></li>
    <li><span style="font-size:0.67em" >other 3<sup>rd</sup> party Hardware (i.e. <a href="http://www.lauterbach.com">Lauterbach</a> w/ JTAG)
@@ -144,6 +144,7 @@ Downside:
 </span> </p>
 <ul style="list-style-type:disc; line-height:0.7;">
    <li><span style="font-size:0.67em" >Requires a Hardware Debugger with DCI capabilities to intercept the <font face="Consolas">int1</font> op code</span></li>
+   <li><span style="font-size:0.67em" >Works with Intel<sup>&reg;</sup> System Studio Debugger:  <a href="https://software.intel.com/en-us/system-studio/choose-download"> Download </a> </span></li>
    <li><span style="font-size:0.67em" >There is no “C” equivalent – needs to be assembly code   </span></li>
 </ul>
 <br>
