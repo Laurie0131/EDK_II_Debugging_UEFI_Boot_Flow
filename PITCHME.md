@@ -554,7 +554,7 @@ Add `CpuBreakpoint()` to SampleApp.c near the entry point
 <br>
 <p style="line-height:45%" align="left" ><span style="font-size:0.7em" ><br></span></p>
 
-<p style="line-height:35%" align="left" ><span style="font-size:0.4em; font-family:Consolas;" >&nbsp;&nbsp;
+<p style="line-height:35%" align="left" ><span style="font-size:0.43em; font-family:Consolas;" >&nbsp;&nbsp;
  bash$ cd &lt;edk2 workspace directory&gt;<br>&nbsp;&nbsp;
  bash$ . edksetup.sh<br>&nbsp;&nbsp;
  bash$ build -m SampleApp/SampleApp.inf<br>&nbsp;&nbsp;
