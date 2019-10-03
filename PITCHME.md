@@ -138,10 +138,11 @@ Note:
 <br>
 <p align="Left" style="line-height:80%"><span style="font-size:0.8em" >
 The Intel Architecture has a special op-code for a breakpoint:	<font face="Consolas">int1 </font><br>
-Better than a <font face="Consolas">CpuDeadLoop()</font> since it halts the processor. Better trace information
+Better than a <font face="Consolas">CpuDeadLoop()</font> since it halts the processor. 
 </span> </p>
 <ul style="list-style-type:disc; line-height:0.7;">
-   <li><span style="font-size:0.67em" >Requires a Hardware Debugger with DCI capabilities to intercept the <font face="Consolas">int1</font> op code</span></li>
+   <li><span style="font-size:0.67em" >Better trace information</span></li>
+   <li><span style="font-size:0.67em" >Requires a HW Debugger w/ DCI capabilities to intercept the <font face="Consolas">int1</font> op code</span></li>
    <li><span style="font-size:0.67em" >Works with Intel<sup>&reg;</sup> System Studio Debugger:  <a href="https://software.intel.com/en-us/system-studio/choose-download"> Download </a> </span></li>
    <li><span style="font-size:0.67em" >There is no “C” equivalent – needs to be assembly code   </span></li>
 </ul>
