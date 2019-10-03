@@ -64,7 +64,7 @@ Note:
 <br>
 @ul[no-bullet]
 - <span style="font-size:01.0em" >&nbsp;<span style="background-color: #7030a0"><b>&nbsp;&nbsp;View call stack</b> &nbsp;&nbsp;</b></span><span style="background-color: #92d050"><b>&nbsp;Go&nbsp;</b></span></p>
-- <span style="font-size:01.0em" >&nbsp;<span style="background-color: #BF5122">&nbsp;&nbsp;<b>Insert `CpuBreakpoint()`</b>&nbsp;&nbsp;</span></span><br><br>
+- <span style="font-size:01.0em" >&nbsp;<span style="background-color: #BF5122">&nbsp;&nbsp;<b>Insert <font face="Consolas">CpuBreakpoint()</font></b>&nbsp;&nbsp;</span></span><br><br>
 - <span style="font-size:01.0em" >&nbsp;<span style="background-color: #00b0f0">&nbsp;&nbsp;<b>View and edit local/global variables</b>&nbsp;&nbsp;</span></span><br><br>
 - <span style="font-size:01.0em" >&nbsp;<span style="background-color: #202020"><b>&nbsp;&nbsp;Set breakpoint</b> &nbsp;&nbsp;</b></span><span style="background-color: #7030a0"><b>&nbsp;Step into/over routines&nbsp;</b></span></p>
 - <span style="font-size:01.0em" >&nbsp;<span style="background-color: #e49436"><b>&nbsp;&nbsp;Go till</b> &nbsp;&nbsp;</b></span><span style="background-color: #92d050"><b>&nbsp;View disassembled code&nbsp;</b></span></p>
@@ -77,19 +77,19 @@ Note:
 
 ---
 @title[CpuBreakpoint vs CpuDeadLoop  ]
-<p align="right"><span class="gold" ><b>`CpuBreakpoint` Vs `CpuDeadLoop` </b></span></p>
+<p align="right"><span class="gold" ><b><font face="Consolas">CpuBreakpoint Vs CpuDeadLoop</font> </b></span></p>
 
 @snap[north-west span-45]
 <br>
 <br>
-@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:70%" ><span style="font-size:01.1em; font-weight: bold;" >`CpuBreakPoint`<br>&nbsp;</span></p>)
+@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:70%" ><span style="font-size:01.1em; font-family:Consolas;" >CpuBreakPoint<br>&nbsp;</span></p>)
 <p align="Left" style="line-height:80%"><span style="font-size:0.8em" >When using a Software debugger: </span> </p>
 <ul style="list-style-type:disc; line-height:0.7;">
    <li><span style="font-size:0.67em" >Visual Studio</span></li>
-   <li><span style="font-size:0.67em" >GDB (`OvmfPkg` w/ qemu)</span></li>
+   <li><span style="font-size:0.67em" >GDB (<font face="Consolas">OvmfPkg</font> w/ qemu)</span></li>
    <li><span style="font-size:0.67em" >Intel<sup>&reg; </sup> UDK Debugger</span></li>
    <li><span style="font-size:0.67em" ><a href="https://www.windriver.com/">Windriver</a> Simics</span></li>
-   <li><span style="font-size:0.67em" >Debug agent - `SourceLevelDebugPkg`</span></li>
+   <li><span style="font-size:0.67em" >Debug agent - <font face="Consolas">SourceLevelDebugPkg</font></span></li>
  </ul>
 <br>
 @snapend
@@ -99,7 +99,7 @@ Note:
 @snap[north-east span-45]
 <br>
 <br>
-@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:70%" ><span style="font-size:01.1em; font-weight: bold;" >`CpuDeadLoop`<br>&nbsp;</span></p>)
+@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:70%" ><span style="font-size:01.1em; font-family:Consolas;" >CpuDeadLoop<br>&nbsp;</span></p>)
 <p align="Left" style="line-height:80%"><span style="font-size:0.8em" >When using a Hardware debugger: </span> </p>
 <ul style="list-style-type:disc; line-height:0.7;">
    <li><span style="font-size:0.67em" >In-Target Probe(ITP)</span></li>
@@ -113,7 +113,7 @@ Note:
 
 @snap[south-west span-100]
 <p style="line-height:70%" align="left"><span style="font-size:0.7em" >
-The functions <font color="#A8ff60">`CpuBreakpoint()`</font> and  <font color="#A8ff60">`CpuDeadLoop()`</font> are part of the EDK II Base Libraries 
+The functions <font color="#A8ff60"><font face="Consolas">CpuBreakpoint()</font></font> and  <font color="#A8ff60"><font face="Consolas">CpuDeadLoop()</font></font> are part of the EDK II Base Libraries 
 and can be compiled with any UEFI or PI Module at any phase of the boot flow (SEC, PEI, DXE, BDS, TSL)
 </span> </p>
 <br>
@@ -266,7 +266,7 @@ Note:
 <br>
 <span style="font-size:0.8em" >There is a loop function in : </span><br>
 @fa[github gp-bullet-gold]<span style="font-size:0.8em">&nbsp;&nbsp;<a href="https://github.com/tianocore/edk2/tree/master/MdeModulePkg/Core/Pei/Dispatcher">MdeModulePkg/Core/Pei/Dispatcher/Dispatcher.c </a></span><br>
-<span style="font-size:0.8em" >Add `CpuBreakpoint();` before launching each PEIM</span>
+<span style="font-size:0.8em" >Add <font face="Consolas">CpuBreakpoint();</font> before launching each PEIM</span>
 
 ```c
 VOID
@@ -303,7 +303,7 @@ Note:
 <br>
 <span style="font-size:0.8em" >Critical point before calling DXE in: </span><br>
 @fa[github gp-bullet-gold]<span style="font-size:0.8em">&nbsp;&nbsp;<a href="https://github.com/tianocore/edk2/tree/master/MdeModulePkg/Core/Pei/PeiMain">MdeModulePkg/Core/Pei/PeiMain.c </a></span><br>
-<span style="font-size:0.8em" >Add `CpuBreakpoint();` before entering DxeIpl</span>
+<span style="font-size:0.8em" >Add <font face="Consolas">CpuBreakpoint();</font> before entering DxeIpl</span>
 
 ```c
 VOID
@@ -462,7 +462,7 @@ Note:
 <br>
 <span style="font-size:0.8em" >DXE call to BDS entry point in:</span><br>
 @fa[github gp-bullet-gold]<span style="font-size:0.8em">&nbsp;&nbsp;<a href="https://github.com/tianocore/edk2/tree/master/MdeModulePkg/Core/Dxe/DxeMain">MdeModulePkg/Core/Dxe/DxeMain/DxeMain.c </a></span><br>
-<span style="font-size:0.8em" >Add `CpuBreakpoint();` to break before BDS. </span>
+<span style="font-size:0.8em" >Add <font face="Consolas">CpuBreakpoint();</font> to break before BDS. </span>
 
 ```c
 VOID
@@ -519,7 +519,7 @@ Note:
    <li><span style="font-size:0.6em" >Entry point</span></li>
    <li><span style="font-size:0.6em" >Local variables</span></li>
  </ul>
- <li><span style="font-size:0.8em" >`CpuBreakpoint();`</span></li>
+ <li><span style="font-size:0.8em" ><font face="Consolas">CpuBreakpoint();</font></span></li>
  </ul>
 </div>
 
@@ -532,7 +532,7 @@ Note:
 @title[Debug in Pre-Boot – UEFI Shell]
 <p align="right"><span class="gold" ><b>Debug in Pre-Boot – UEFI Shell Application</b></span></p>
 <p style="line-height:75%" align="left" ><span style="font-size:0.8em" >
-Add `CpuBreakpoint()` to SampleApp.c near the entry point
+Add <font face="Consolas">CpuBreakpoint()</font> to SampleApp.c near the entry point
 <br>
 @size[.8em](Add SampleApp.inf to the platform .dsc file)
 </span></p>
