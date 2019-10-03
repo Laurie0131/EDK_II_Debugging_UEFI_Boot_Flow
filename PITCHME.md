@@ -116,7 +116,6 @@ Note:
 The functions <font color="#A8ff60"><font face="Consolas">CpuBreakpoint()</font></font> and  <font color="#A8ff60"><font face="Consolas">CpuDeadLoop()</font></font> are part of the EDK II Base Libraries 
 and can be compiled with any UEFI or PI Module at any phase of the boot flow (SEC, PEI, DXE, BDS, TSL)
 </span> </p>
-<br>
 @snapend
 
 
@@ -139,8 +138,7 @@ Note:
 <br>
 <p align="Left" style="line-height:80%"><span style="font-size:0.8em" >
 The Intel Architecture has a special op-code for a breakpoint:	<font face="Consolas">int1 </font><br>
-Better than a <font face="Consolas">CpuDeadLoop()</font> since it halts the processor. Better trace information<br>
-Downside:
+Better than a <font face="Consolas">CpuDeadLoop()</font> since it halts the processor. Better trace information
 </span> </p>
 <ul style="list-style-type:disc; line-height:0.7;">
    <li><span style="font-size:0.67em" >Requires a Hardware Debugger with DCI capabilities to intercept the <font face="Consolas">int1</font> op code</span></li>
